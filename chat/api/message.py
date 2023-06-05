@@ -85,7 +85,7 @@ def mark_as_read(room: str):
         room (str): Room's name.
     """
     frappe.enqueue(
-        "chat.utils.update_room", room=room, is_read=1, update_modified=False
+        "chat.utils.update_room", room=room, is_read=1, update_modified=False, now=True
     )
 
 
